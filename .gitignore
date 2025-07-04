@@ -1,0 +1,25 @@
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.log
+
+# Environment
+.env
+.venv/
+env/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Chroma DB Storage
+chroma_store/
+
+# Uploaded Images
+data/images/
+
+# Streamlit config cache
+.streamlit/config.toml
