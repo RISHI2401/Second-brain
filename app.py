@@ -113,8 +113,11 @@ with tab2:
                     if reminder_date:
                         st.markdown(f"📅 **Reminder Date:** `{reminder_date}`")
 
-                    if meta.get("image_path") and os.path.exists(meta["image_path"]):
-                        st.image(meta["image_path"], width=200)
+                    image_path = meta.get("image_path")
+                    if image_path and os.path.exists(image_path):
+                        st.image(image_path, width=150)
+                    else:
+                        st.info("No image available for this memory.")
 
                     st.markdown("---")
                     shown = True
@@ -130,5 +133,12 @@ with tab3:
         for doc, meta in zip(all_results["documents"], all_results["metadatas"]):
             st.write(f"📝 {doc}")
             st.write(f"📅 {meta.get('reminder_date')}")
-            st.image(meta.get("image_path"), width=150)
+            
+            image_path = meta.get("image_path")
+            if image_path and os.path.exists(image_path):
+                st.image(image_path, width=150)
+            else:
+                st.info("No image available for this memory.")
+            
             st.markdown("---")
+
