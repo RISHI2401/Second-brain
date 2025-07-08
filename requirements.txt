@@ -2,3 +2,5 @@ streamlit
 chromadb
 sentence-transformers
 Pillow
+google-generativeai
+python-dotenv

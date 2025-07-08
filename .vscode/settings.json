@@ -1,7 +1,10 @@
 {
   "cSpell.words": [
     "chromadb",
+    "dotenv",
     "embedder",
+    "genai",
+    "generativeai",
     "metadatas",
     "pycache",
     "streamlit",
